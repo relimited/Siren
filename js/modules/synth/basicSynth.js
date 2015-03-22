@@ -36,7 +36,9 @@ define(["inheritance"], function(Inhertiance){'use strict';
 		
 		//Stop a sound
 		stopSound : function(evt){
-			this.oscillator.stop(0); //stop ASAP, no delay
+			if(this.oscillator){
+				this.oscillator.stop(0); //stop ASAP, no delay
+			}
 		},
 		
 		//changes a note's frequency
@@ -46,9 +48,16 @@ define(["inheritance"], function(Inhertiance){'use strict';
 		
 		updateVolume : function(vol){
 			this.gainNode.gain.value = vol;
-		}
+		},
+		//============================END EVENT DRIVEN FUNCTIONS====================
 		
-		//============================END EVENT DRIVEN FUNCTIONS==================
+		getFrequency : function(){
+			return this.oscillator.frequency.value;
+		},
+		
+		getVolume : function(){
+			return this.gainNode.gain.value = vol;
+		}
 	});
 	
 	return basicSynth;

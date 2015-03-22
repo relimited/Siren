@@ -10,7 +10,7 @@ require.config({
     }
 });
 
-require(["../src/js/modules/app"], function(App){'use strict';
+require(["./js/modules/app"], function(App){'use strict';
 	var app = new App();  //app object.
 	//TODO: preprocessing goes here
 	
