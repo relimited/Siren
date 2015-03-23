@@ -8,7 +8,7 @@
 //update fires as long as the pad is clicked on and the mouse moves
 //endControl is fired when the mouse is released
 
-define(['inheritance', "../util/util"], function(Inheritance, Util){'use strict';
+define(['inheritance', "../../util/util"], function(Inheritance, Util){'use strict';
 	var pad = Class.extend({
 		/**
 		 * Creates a new synth pad

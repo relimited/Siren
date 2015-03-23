@@ -27,7 +27,10 @@ define(["inheritance"], function(Inheritance){
 		},
 		
 		setType : function(type){
-			this.osc.type = type;	
+			//this type of OSC does not support custom wave tables
+			if(type != "custom"){
+				this.osc.type = type;
+			}	
 		},
 		
 		getFrequency : function(){
@@ -35,7 +38,7 @@ define(["inheritance"], function(Inheritance){
 		},
 		
 		getGain : function(){
-			return this.osc.gain.value;
+			return this.gainNode.gain.value;
 		},
 		
 		getType : function(){
