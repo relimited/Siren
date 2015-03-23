@@ -109,9 +109,9 @@ textarea {
   -ms-user-select: none;
 }
 
-
-
-
+.audioControl { 
+	display : inline-block;
+}
 
 
 

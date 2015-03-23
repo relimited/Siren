@@ -1,6 +1,6 @@
 //Main file for Siren.js
 
-define(["inheritance", "./synth/basicSynth", "./UI/basicSynthUI"], function(Inheritance, BasicSynth, BasicSynthUI){'use strict';
+define(["inheritance", "./synth/oscillatorBank", "./UI/oscillatorBankUI"], function(Inheritance, Synth, SynthUI){'use strict';
 	var app = Class.extend({
 		init : function(){
 			this.synth;
@@ -10,11 +10,12 @@ define(["inheritance", "./synth/basicSynth", "./UI/basicSynthUI"], function(Inhe
 		start : function(){
 			console.log("Creating synth...");
 			//create the synth
-			this.synth = new BasicSynth();
+			this.synth = new Synth();
 			console.log("Synth", this.synth);
+			
 			//and the UI
 			console.log("building UI for ", this.synth);
-			this.ui = new BasicSynthUI(this.synth);
+			this.ui = new SynthUI(this.synth);
 			console.log("App built, starting...");
 		}
 	});

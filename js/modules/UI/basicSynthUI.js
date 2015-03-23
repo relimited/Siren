@@ -61,7 +61,6 @@ define(["inheritance", "./synthPad"], function(Inheritance, SynthPad){'use stric
 				volume.innerHTML = Math.floor(trueYVal * 100) + "%";
 			};
 			this.pad.startControl = function(evt){
-				synth.createOsc();
 				//FIXME:force an update position call
 				pad.handlers.handleUpdatePosition(evt);
 				console.log('freq', synth.getFrequency());

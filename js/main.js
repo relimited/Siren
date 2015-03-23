@@ -6,7 +6,8 @@
 
 require.config({
     paths : {
-        'inheritance' : 'js/vendor/inheritance'
+        'inheritance' : 'js/vendor/inheritance',
+        'jqKnob' : 'js/vendor/jquery.knob'
     }
 });
 
